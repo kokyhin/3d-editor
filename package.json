@@ -1,0 +1,16 @@
+{
+  "name": "3d-editor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gulpgile.js",
+  "devDependencies": {
+    "coffee-script": "^1.11.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
