@@ -13,5 +13,11 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2",
+    "backbone.marionette": "marionette#^2.4.7",
+    "requirejs": "^2.2.0"
+  }
 }
