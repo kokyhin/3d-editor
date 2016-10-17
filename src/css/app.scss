@@ -1,3 +1,57 @@
-body {
-  background-color: #fff;
+#preview {
+  display: block;
+  width: 100%;
+  height: 400px;
+  position: relative;
+  z-index: 4
+}
+
+.previewWrapper {
+  position: relative;
+  z-index: 3;
+
+  &.active {
+    .gridOverlay {
+      z-index: 5;
+    }
+  }
+
+  .gridOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .column {
+      flex: 1;
+      display: flex;
+
+      .item {
+        flex: 1;
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        border: 1px solid #fff;
+        color: #fff;
+        font-size: 40px;
+        i {
+          opacity: 0;
+        }
+
+        &:hover, &.active {
+          background-color: rgba(0,0,0,0.7);
+          transition: background-color 0.5s ease;
+          cursor: pointer;
+          i {
+            opacity: 1;
+            transition: opacity 0.5s ease;
+          }
+        }
+      }
+    }
+  }
 }

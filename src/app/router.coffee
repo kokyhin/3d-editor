@@ -18,7 +18,5 @@ define [
       "*All": "notFound"
 
     dashboard: ->
-      contentLayout = new ContentLayoutView()
 
     notFound: ->
-      Radio.channel("layout").request("regions:container").show new NotFoundView()
