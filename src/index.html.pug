@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  meta(name='description', content='')
+  meta(name='author', content='')
+  link(rel="stylesheet", href="./lib/bootstrap/dist/css/bootstrap.min.css")
+  link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css")
+  link(rel="stylesheet", href="css/app.css")
+  title Client UI
+body
+  .container
+    .row
+      .col-sm-9.content-wrapper
+        |Left=side
+      .col-sm-3.js-sidebar
+        |Right side
+
+script(src='./lib/requirejs/require.js' data-main="app/bootstrap")

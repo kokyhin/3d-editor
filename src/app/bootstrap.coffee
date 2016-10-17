@@ -10,6 +10,8 @@ require.config
     'Backbone': '../lib/backbone/backbone-min'
     'underscore': '../lib/underscore/underscore-min'
     'Radio.shim': '../js/radio.shim'
+    'Radio': '../lib/backbone.radio/build/backbone.radio'
+    'Validation': '../lib/backbone.validation/dist/backbone-validation-amd-min'
   map:
     '*':
       'backbone': 'Backbone'
