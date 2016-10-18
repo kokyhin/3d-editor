@@ -24,8 +24,6 @@ define [
       @sidebar.show new SidebarView
       @container.show new ContainerView
 
-      console.log 'layout rendered'
-
       Radio.channel('layout').reply
         'regions:container': @container
         'regions:sidebar': @sidebar

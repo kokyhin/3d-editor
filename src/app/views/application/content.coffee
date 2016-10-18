@@ -24,9 +24,9 @@ define [
       @ui.preview.toggleClass 'active'
 
     onItemClick: (ev)->
-      _.each $('.item'), (item)->
+      for item in $('.item')
         $(item).removeClass 'active'
 
-      item = $(ev.target.closest('.item'));
+      item = $(ev.currentTarget).closest '.item'
       item.addClass 'active'
-      index = $(item).data('index');
+      index = $(item).data 'index'
