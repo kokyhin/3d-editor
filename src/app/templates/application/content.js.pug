@@ -1,5 +1,6 @@
 .previewWrapper
   iframe#preview(allowfullscreen='', style='border-style:none;', src='https://cdn.pannellum.org/2.2/pannellum.htm?panorama=https://pannellum.org/images/cerro-toco-0.jpg&autoLoad=true')
+  img.img-responsive(src="img/sphere/main.jpg", alt="img")
   .gridOverlay
     .column
       .item(data-index='1')
@@ -28,5 +29,17 @@
         i.fa.fa-eye
       .item(data-index='12')
         i.fa.fa-eye
+    .column
+      .item(data-index='13')
+        i.fa.fa-eye
+      .item(data-index='14')
+        i.fa.fa-eye
+      .item(data-index='15')
+        i.fa.fa-eye
+      .item(data-index='16')
+        i.fa.fa-eye
 
 button.btn.js-choose Choose photo
+
+#preview-choosen-slice
+  img.hidden.img-responsive(src="img/sphere/tile_0.jpg", alt="img")

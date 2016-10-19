@@ -11,11 +11,17 @@
   z-index: 3;
 
   &.active {
+    img {
+      display: block;
+    }
+    #preview {
+      display: none;
+    }
     .gridOverlay {
       z-index: 5;
     }
   }
-
+  img {display: none;}
   .gridOverlay {
     position: absolute;
     top: 0;

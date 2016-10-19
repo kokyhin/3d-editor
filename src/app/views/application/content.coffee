@@ -15,6 +15,7 @@ define [
       preview: '.previewWrapper'
       button : '.js-choose'
       imgSlice: '.item'
+      imgPreview: '#preview-choosen-slice img'
 
     events:
       "click @ui.button": "onChooseClick"
@@ -22,6 +23,7 @@ define [
 
     onChooseClick: ->
       @ui.preview.toggleClass 'active'
+      @ui.imgPreview.toggleClass 'hidden'
 
     onItemClick: (ev)->
       for item in $('.item')
@@ -29,4 +31,5 @@ define [
 
       item = $(ev.currentTarget).closest '.item'
       item.addClass 'active'
-      index = $(item).data 'index'
+      index = $(item).data('index') - 1
+      @ui.imgPreview.attr('src', 'img/sphere/tile_' + index + '.jpg')
