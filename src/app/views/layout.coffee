@@ -3,13 +3,13 @@ define [
   "Backbone"
   "Radio"
   "views/application/sidebar"
-  "views/application/content"
+  "views/application/img-preview"
 ], (
   Marionette
   Backbone
   Radio
   SidebarView
-  ContainerView
+  imgLayoutView
 ) ->
 
   class LayoutView extends Marionette.LayoutView
@@ -22,7 +22,7 @@ define [
 
     onRender: ->
       @sidebar.show new SidebarView
-      @container.show new ContainerView
+      @container.show new imgLayoutView
 
       Radio.channel('layout').reply
         'regions:container': @container

@@ -1,14 +1,14 @@
 define [
   "Marionette"
   "Radio"
-  "templates/application/content"
+  "templates/application/img-preview"
 ], (
   Marionette
   Radio
   template
 ) ->
 
-  class ContentLayoutView extends Marionette.ItemView
+  class imgLayoutView extends Marionette.ItemView
     template: template
 
     ui:
