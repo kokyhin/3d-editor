@@ -4,12 +4,14 @@ define [
   "Radio"
   "views/application/sidebar"
   "views/application/img-preview"
+  "models/img-preview"
 ], (
   Marionette
   Backbone
   Radio
   SidebarView
-  imgLayoutView
+  ImgLayoutView
+  ImgPreviewModel
 ) ->
 
   class LayoutView extends Marionette.LayoutView
@@ -21,8 +23,9 @@ define [
       sidebar:   ".js-sidebar"
 
     onRender: ->
+      imgPreview = new ImgPreviewModel
       @sidebar.show new SidebarView
-      @container.show new imgLayoutView
+      @container.show new ImgLayoutView model: imgPreview
 
       Radio.channel('layout').reply
         'regions:container': @container

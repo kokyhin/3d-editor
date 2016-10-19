@@ -33,3 +33,6 @@ define [
       item.addClass 'active'
       index = $(item).data('index') - 1
       @ui.imgPreview.attr('src', 'img/sphere/tile_' + index + '.jpg')
+
+    onRender: ->
+      console.log @model.get('name')
